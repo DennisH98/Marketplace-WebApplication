@@ -1,0 +1,42 @@
+version: '3.4'
+
+services:
+    client:
+      build:
+        context: ./client
+      ports:
+        - "3000:80"
+      depends_on:
+      - server
+      networks:
+        - frontend 
+
+    server:
+      build:
+        context: ./server
+      environment:
+      - MONGO_URI=mongodb://mongo:27017/projectdb
+      ports:
+        - "5000:5000"
+      depends_on:
+      - mongo
+      networks:
+      - backend
+      - frontend
+        
+    mongo:
+      image: mongo:latest
+      ports:
+        - 27017:27017
+      volumes:
+        - data:/data/db
+      networks:
+      - backend
+
+
+volumes:
+  data:
+
+networks:
+  frontend:
+  backend:

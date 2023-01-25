@@ -1,0 +1,28 @@
+.ProductName {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.ProductPrice {
+    font-size: 18px;
+    padding-bottom: 8px;
+
+}
+
+.ProductPriceHeader {
+    font-size: 18px;
+    padding-bottom: 8px;
+    font-weight: bold;
+}
+
+
+.ProductDescription {
+    padding-bottom: 8px;
+}
+
+.ProductDescriptionHeader {
+    padding-bottom: 8px;
+    font-weight: bold;
+}
